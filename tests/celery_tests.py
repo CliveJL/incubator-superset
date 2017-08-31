@@ -104,7 +104,7 @@ class CeleryTestCase(SupersetTestCase):
         admin = appbuilder.sm.find_user('admin')
         if not admin:
             appbuilder.sm.add_user(
-                'admin', 'admin', ' user', 'admin@fab.org',
+                'admin', 'admin', ' user', 'admin@example.org',
                 appbuilder.sm.find_role('Admin'),
                 password='general')
         cli.load_examples(load_test_data=True)
