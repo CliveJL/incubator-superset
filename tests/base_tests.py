@@ -57,34 +57,34 @@ class SupersetTestCase(unittest.TestCase):
         admin = appbuilder.sm.find_user('admin')
         if not admin:
             appbuilder.sm.add_user(
-                'admin', 'admin', ' user', 'admin@example.org',
+                'admin', 'admin', ' user', 'admin@fab.org',
                 appbuilder.sm.find_role('Admin'),
                 password='general')
 
         gamma = appbuilder.sm.find_user('gamma')
         if not gamma:
             appbuilder.sm.add_user(
-                'gamma', 'gamma', 'user', 'gamma@example.org',
+                'gamma', 'gamma', 'user', 'gamma@fab.org',
                 appbuilder.sm.find_role('Gamma'),
                 password='general')
 
         gamma2 = appbuilder.sm.find_user('gamma2')
         if not gamma2:
             appbuilder.sm.add_user(
-                'gamma2', 'gamma2', 'user', 'gamma2@example.org',
+                'gamma2', 'gamma2', 'user', 'gamma2@fab.org',
                 appbuilder.sm.find_role('Gamma'),
                 password='general')
 
         gamma_sqllab_user = appbuilder.sm.find_user('gamma_sqllab')
         if not gamma_sqllab_user:
             appbuilder.sm.add_user(
-                'gamma_sqllab', 'gamma_sqllab', 'user', 'gamma_sqllab@example.org',
+                'gamma_sqllab', 'gamma_sqllab', 'user', 'gamma_sqllab@fab.org',
                 gamma_sqllab_role, password='general')
 
         alpha = appbuilder.sm.find_user('alpha')
         if not alpha:
             appbuilder.sm.add_user(
-                'alpha', 'alpha', 'user', 'alpha@example.org',
+                'alpha', 'alpha', 'user', 'alpha@fab.org',
                 appbuilder.sm.find_role('Alpha'),
                 password='general')
         sm.get_session.commit()
